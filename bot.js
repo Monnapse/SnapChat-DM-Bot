@@ -78,9 +78,9 @@
     }
 
     const msg = prompt("Please enter your message:");
-    const type_timeout = 20;
+    const type_timeout = 10;
     const send_timeout = 75;
-    const dm_timeout = 200;
+    const dm_timeout = 500;
 
     const list = getElementByXPath('/html/body/main/div[1]/div[2]/nav/div[1]/div/div');
     let index = 0;
