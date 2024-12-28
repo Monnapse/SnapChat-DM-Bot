@@ -83,6 +83,7 @@
     const dm_timeout = 500;
 
     const list = getElementByXPath('/html/body/main/div[1]/div[2]/nav/div[1]/div/div');
+    ////*[@id="root"]/div[1]/div[2]/nav/div[1]/div/div
     let index = 0;
 
     function nextDm()
@@ -90,8 +91,8 @@
         if (index < list.childNodes.length) {
             const child = list.childNodes[index].firstChild;
             child.click();
-            const msgElement = getElementByXPath('//*[@id="root"]/div[1]/div[3]/div/div/div/div[2]/div[2]/div/div/div/div');
-            simulateTyping(()=>{ setTimeout(()=>{ pressEnterOnDiv(msgElement); setTimeout(()=>{ nextDm(); },dm_timeout); }  , send_timeout)}, msgElement, msg, type_timeout);
+            const msgElement = getElementByXPath('/html/body/main/div[1]/div[3]/div/div/div/div[2]/div[2]/div/div/div/div');
+            setTimeout(()=>{ simulateTyping(()=>{ setTimeout(()=>{ pressEnterOnDiv(msgElement); setTimeout(()=>{ nextDm(); },send_timeout); }  , send_timeout)}, msgElement, msg, type_timeout); }, dm_timeout);
             index++;
         } else {
             alert("Done");
