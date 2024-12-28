@@ -77,26 +77,10 @@
         typeChar();
       }
 
-      function insertImage(imageDataUrl, div)
-      {
-        const img = document.createElement('img');
-
-        // Set the src attribute to the Data URL
-        img.src = imageDataUrl;
-            
-        // Optionally, you can set styles for the image
-        img.style.maxWidth = '100%';
-        img.style.maxHeight = '100%';
-            
-        // Append the image to the contenteditable div
-        div.appendChild(img);
-      }
-
     const msg = prompt("Please enter your message:");
     const type_timeout = 20;
     const send_timeout = 75;
     const dm_timeout = 200;
-
 
     const list = getElementByXPath('/html/body/main/div[1]/div[2]/nav/div[1]/div/div');
     let index = 0;
