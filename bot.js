@@ -75,7 +75,7 @@
         };
       
         typeChar();
-      }
+    }
 
     const msg = prompt("Please enter your message:");
     const type_timeout = 20;
@@ -92,9 +92,7 @@
             child.click();
             const msgElement = getElementByXPath('//*[@id="root"]/div[1]/div[3]/div/div/div/div[2]/div[2]/div/div/div/div');
             simulateTyping(()=>{ setTimeout(()=>{ pressEnterOnDiv(msgElement); setTimeout(()=>{ nextDm(); },dm_timeout); }  , send_timeout)}, msgElement, msg, type_timeout);
-    
             index++;
-            
         } else {
             alert("Done");
         }
